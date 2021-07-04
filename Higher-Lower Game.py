@@ -3,17 +3,19 @@ import random
 # display art
 print(logo)
 
+def format_data(account):
+    """display the account into printable format"""
+    account_name = account["name"]
+    account_description = account["description"]
+    account_country = account["country"]
+    print(f"name: {account_name}, description: {account_description}, country: {account_country}")
+    
 # import two random account from the list
 account_a = random.choice(data_list)
 account_b = random.choice(data_list)
 if account_a == account_b:                 #if both accounts come oot to be same
     account_b = random.choice(data_list)
 
-# display the account into printable format
-account_name =  account_a["name"]
-account_description = account_a["description"]
-account_country =  account_a["country"]
-print(f"name: {account_name}, description: {account_description}, country: {account_country}")
 
 
 # Ask the user to guess
